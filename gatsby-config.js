@@ -1,8 +1,9 @@
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `the Orange App`,
+    description: `Connecting our local community`,
+    author: `Roundbox Events`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,8 +14,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+         families: [
+           'Nunito Sans:400,700,900', 'sans-serif'
+         ]
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,8 +40,10 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
   ],
 }

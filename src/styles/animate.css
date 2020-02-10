@@ -1,0 +1,32 @@
+
+
+
+
+.slideInDownGrey > div{
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  height: 625px;
+}
+
+.slideInDown > div{
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.slideInUp> div{
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.slideInDownPosts > div div:nth-child(2){
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+
+
+
+
+
+.animated{
+  transition: all 1s ease;
+}
